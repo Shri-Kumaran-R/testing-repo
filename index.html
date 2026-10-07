@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microcom Systems | Enterprise IT Hardware & Server Solutions in Chennai</title>
+    
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS styles for smooth visual polish -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1e293b;
+            background-color: #ffffff;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(240, 249, 255, 0.9) 0%, rgba(255, 255, 255, 1) 100%);
+        }
+        .accent-gradient {
+            background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 100%);
+        }
+        .card-shadow {
+            box-shadow: 0 10px 30px -5px rgba(14, 165, 233, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.03);
+        }
+        .card-shadow-hover:hover {
+            box-shadow: 0 20px 35px -5px rgba(14, 165, 233, 0.15), 0 8px 16px -4px rgba(0, 0, 0, 0.06);
+            transform: translateY(-3px);
+        }
+        .active-nav {
+            color: #0284c7;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-navy-900 text-slate-300 text-xs sm:text-sm py-2 px-4 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4">
+                <span class="flex items-center gap-1.5"><i class="fa-solid me-1 fa-location-dot text-brand-500"></i> Mahalingapuram, Chennai</span>
+                <span class="hidden md:inline text-slate-600">|</span>
+                <span class="hidden md:flex items-center gap-1.5"><i class="fa-solid fa-clock text-brand-500"></i> Mon - Sat: 9:00 AM - 6:30 PM</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="tel:+914428170000" class="hover:text-brand-500 transition-colors flex items-center gap-1.5"><i class="fa-solid fa-phone text-brand-500"></i> +91 44 2817 0000</a>
+                <a href="mailto:info@microcomsystems.in" class="hover:text-brand-500 transition-colors hidden sm:flex items-center gap-1.5"><i class="fa-solid fa-envelope text-brand-500"></i> info@microcomsystems.in</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Logo -->
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-xl accent-gradient flex items-center justify-center text-white shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-server text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-extrabold font-heading tracking-tight text-navy-900 block leading-tight">
+                            MICROCOM <span class="text-brand-600">SYSTEMS</span>
+                        </span>
+                        <span class="text-[10px] tracking-widest uppercase font-semibold text-slate-500 block">IT Infrastructure & Solutions</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="#home" class="text-sm font-medium text-slate-700 hover:text-brand-600 transition-colors">Home</a>
+                    <a href="#about" class="text-sm font-medium text-slate-700 hover:text-brand-600 transition-colors">About Us</a>
+                    <a href="#services" class="text-sm font-medium text-slate-700 hover:text-brand-600 transition-colors">Services & Hardware</a>
+                    <a href="#partners" class="text-sm font-medium text-slate-700 hover:text-brand-600 transition-colors">Brands</a>
+                    <a href="#contact" class="text-sm font-medium text-slate-700 hover:text-brand-600 transition-colors">Contact</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:flex items-center gap-3">
+                    <button onclick="openQuoteModal()" class="px-5 py-2.5 rounded-lg accent-gradient text-white font-semibold text-sm shadow-md shadow-brand-600/20 hover:opacity-95 hover:shadow-lg transition-all flex items-center gap-2">
+                        <span>Get a Quote</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="p-2 rounded-lg text-slate-700 hover:text-brand-600 hover:bg-slate-50 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-brand-50 hover:text-brand-600">Home</a>
+            <a href="#about" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-brand-50 hover:text-brand-600">About Us</a>
+            <a href="#services" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-brand-50 hover:text-brand-600">Services & Hardware</a>
+            <a href="#partners" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-brand-50 hover:text-brand-600">Brands</a>
+            <a href="#contact" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-brand-50 hover:text-brand-600">Contact</a>
+            <div class="pt-2">
+                <button onclick="openQuoteModal()" class="w-full py-3 rounded-lg accent-gradient text-white font-semibold text-sm shadow-md text-center">
+                    Get an Instant Quote
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative overflow-hidden pt-12 pb-20 md:pt-20 md:pb-32 hero-gradient border-b border-slate-100">
+        <!-- Background Decorative Accent Elements -->
+        <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-brand-200/40 blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/2 -left-20 w-80 h-80 rounded-full bg-brand-100/50 blur-2xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Content Left -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-100 border border-brand-200 text-brand-800 text-xs font-semibold uppercase tracking-wider">
+                        <i class="fa-solid fa-shield-halved text-brand-600"></i> Trusted Chennai IT Infrastructure Partner
+                    </div>
+                    
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-900 tracking-tight leading-tight">
+                        Enterprise IT Hardware, Server Solutions & Systems Support in <span class="text-brand-600">Chennai</span>
+                    </h1>
+                    
+                    <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Microcom Systems provides comprehensive hardware sales, IBM/HP/Dell server procurement, commercial printer automation, workstation supply, and prompt AMC repair services across Chennai.
+                    </p>
+
+                    <!-- Hero CTAs -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#services" class="w-full sm:w-auto px-7 py-3.5 rounded-xl accent-gradient text-white font-semibold shadow-lg shadow-brand-500/25 hover:shadow-xl hover:shadow-brand-500/35 hover:-translate-y-0.5 transition-all text-center">
+                            Explore Services
+                        </a>
+                        <a href="#contact" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-white border border-slate-200 text-slate-800 font-semibold hover:border-brand-500 hover:text-brand-600 shadow-sm transition-all text-center">
+                            Contact Mahalingapuram Office
+                        </a>
+                    </div>
+
+                    <!-- Trust Stats & Badges -->
+                    <div class="pt-8 border-t border-slate-200/80 grid grid-cols-3 gap-4 max-w-lg mx-auto lg:mx-0">
+                        <div class="text-center lg:text-left">
+                            <p class="text-2xl sm:text-3xl font-extrabold text-navy-900">20+</p>
+                            <p class="text-xs text-slate-500 font-medium">Years Experience</p>
+                        </div>
+                        <div class="text-center lg:text-left border-x border-slate-200 px-2">
+                            <p class="text-2xl sm:text-3xl font-extrabold text-brand-600">100%</p>
+                            <p class="text-xs text-slate-500 font-medium">Genuine Parts</p>
+                        </div>
+                        <div class="text-center lg:text-left">
+                            <p class="text-2xl sm:text-3xl font-extrabold text-navy-900">Rapid</p>
+                            <p class="text-xs text-slate-500 font-medium">On-Site Servicing</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Visual Graphic Right -->
+                <div class="lg:col-span-5">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Main Visual Card -->
+                        <div class="bg-navy-900 rounded-2xl p-6 sm:p-8 text-white shadow-2xl relative z-10 border border-slate-800 overflow-hidden">
+                            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-brand-500/20 rounded-full blur-xl"></div>
+                            
+                            <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-800">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></div>
+                                    <span class="text-xs font-mono text-slate-300">SYSTEM_STATUS: OPERATIONAL</span>
+                                </div>
+                                <span class="text-xs bg-slate-800 px-2.5 py-1 rounded text-slate-300">Chennai, TN</span>
+                            </div>
+
+                            <div class="space-y-4">
+                                <!-- Feature Card 1 -->
+                                <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700/60 flex items-start gap-4">
+                                    <div class="p-2.5 bg-brand-500/20 text-brand-400 rounded-lg shrink-0">
+                                        <i class="fa-solid fa-server text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-sm text-white">Enterprise Servers</h4>
+                                        <p class="text-xs text-slate-400 mt-0.5">IBM, HP ProLiant & Dell PowerEdge server setups.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Feature Card 2 -->
+                                <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700/60 flex items-start gap-4">
+                                    <div class="p-2.5 bg-brand-500/20 text-brand-400 rounded-lg shrink-0">
+                                        <i class="fa-solid fa-print text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-sm text-white">Office Automation & Printers</h4>
+                                        <p class="text-xs text-slate-400 mt-0.5">Commercial copiers, laser printers, toners & repairs.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Feature Card 3 -->
+                                <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700/60 flex items-start gap-4">
+                                    <div class="p-2.5 bg-brand-500/20 text-brand-400 rounded-lg shrink-0">
+                                        <i class="fa-solid fa-headset text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-sm text-white">IT Maintenance Contracts (AMC)</h4>
+                                        <p class="text-xs text-slate-400 mt-0.5">Prompt hardware troubleshooting and corporate SLA support.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+                                <span><i class="fa-solid fa-location-dot me-1 text-brand-400"></i> Nungambakkam</span>
+                                <span><i class="fa-solid fa-circle-check me-1 text-emerald-400"></i> Certified Technicians</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Image/Card Visual -->
+                <div class="lg:col-span-5">
+                    <div class="bg-gradient-to-tr from-brand-500 to-brand-600 rounded-3xl p-1 shadow-xl">
+                        <div class="bg-white rounded-[22px] p-8 space-y-6">
+                            <div class="w-14 h-14 rounded-2xl bg-brand-50 flex items-center justify-center text-brand-600 text-2xl mb-4">
+                                <i class="fa-solid fa-building-user"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-navy-900">Your Trusted IT Infrastructure Partner</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                Located strategically in Mahalingapuram, Nungambakkam (near Ayyappan Temple), Microcom Systems has established itself as a premier vendor for hardware sales, enterprise server deployments, office automation equipment, and reliable computer hardware maintenance.
+                            </p>
+                            
+                            <div class="space-y-3 pt-2">
+                                <div class="flex items-center gap-3 text-sm font-medium text-slate-700">
+                                    <i class="fa-solid fa-circle-check text-brand-600"></i> Direct Sourcing of Enterprise Hardware
+                                </div>
+                                <div class="flex items-center gap-3 text-sm font-medium text-slate-700">
+                                    <i class="fa-solid fa-circle-check text-brand-600"></i> Experienced Technical Engineers in Chennai
+                                </div>
+                                <div class="flex items-center gap-3 text-sm font-medium text-slate-700">
+                                    <i class="fa-solid fa-circle-check text-brand-600"></i> Customized Annual Maintenance Contracts (AMC)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right About Content -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-block px-3 py-1 rounded-md bg-brand-50 text-brand-600 text-xs font-bold uppercase tracking-wider">
+                        About Microcom Systems
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">
+                        Powering Business Operations Across Chennai with Reliable Hardware
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        At Microcom Systems, we understand that smooth IT operations are critical for business productivity. Whether supplying multi-user server environments, outfitting corporate offices with desktop units, or repairing commercial high-volume printers, our focus is on maximum uptime and transparent pricing.
+                    </p>
+
+                    <!-- Core Strengths Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+                        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100 card-shadow transition-all">
+                            <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center font-bold mb-3">
+                                <i class="fa-solid fa-microchip"></i>
+                            </div>
+                            <h4 class="font-bold text-navy-900 text-base mb-1">Enterprise Servers</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed">IBM, HP, and Dell server configurations customized to your enterprise workload and bandwidth needs.</p>
+                        </div>
+
+                        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100 card-shadow transition-all">
+                            <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center font-bold mb-3">
+                                <i class="fa-solid fa-screwdriver-wrench"></i>
+                            </div>
+                            <h4 class="font-bold text-navy-900 text-base mb-1">On-Site Support</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed">Fast response technical engineers equipped for on-location diagnosis and component replacement.</p>
+                        </div>
+
+                        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100 card-shadow transition-all">
+                            <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center font-bold mb-3">
+                                <i class="fa-solid fa-boxes-packing"></i>
+                            </div>
+                            <h4 class="font-bold text-navy-900 text-base mb-1">Genuine Spares</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed">Authentic motherboards, RAM modules, power supplies, toners, and printer components.</p>
+                        </div>
+
+                        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100 card-shadow transition-all">
+                            <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center font-bold mb-3">
+                                <i class="fa-solid fa-handshake"></i>
+                            </div>
+                            <h4 class="font-bold text-navy-900 text-base mb-1">Tailored AMC Plans</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed">Comprehensive maintenance contracts protecting your systems against unexpected hardware failures.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-slate-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <div class="inline-block px-3 py-1 rounded-md bg-brand-100 text-brand-700 text-xs font-bold uppercase tracking-wider">
+                    Our Solutions
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900">
+                    Comprehensive IT & Hardware Services
+                </h2>
+                <p class="text-slate-600">
+                    From enterprise-grade server infrastructure to office desktop procurement and commercial printer maintenance.
+                </p>
+            </div>
+
+            <!-- Interactive Service Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Service Card 1 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200/80 card-shadow card-shadow-hover transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl accent-gradient flex items-center justify-center text-white text-xl shadow-md mb-5">
+                            <i class="fa-solid fa-server"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Enterprise Servers</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            Deployment, rack mounting, upgrade, and maintenance for enterprise server systems (Dell PowerEdge, HP ProLiant, IBM System x).
+                        </p>
+                        <ul class="text-xs text-slate-700 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-brand-500"></i> RAID Storage & Array Setup</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-brand-500"></i> Server Memory & CPU Upgrades</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-brand-500"></i> Thermal Management & Power</li>
+                        </ul>
+                    </div>
+                    <button onclick="openQuoteModal('Enterprise Server Solutions')" class="w-full py-2.5 rounded-lg bg-slate-100 hover:bg-brand-50 text-slate-800 hover:text-brand-600 font-semibold text-xs transition-colors">
+                        Inquire Now
+                    </button>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200/80 card-shadow card-shadow-hover transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl accent-gradient flex items-center justify-center text-white text-xl shadow-md mb-5">
+                            <i class="fa-solid fa-desktop"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Desktops & Workstations</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            Bulk corporate desktop supply, custom high-performance CAD workstations, and laptop sales for businesses.
+                        </p>
+                        <ul class="text-xs text-slate-700 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-brand-500"></i> Commercial Desktop Bulk Deals</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-brand-500"></i> Custom PC Build for Graphics/Engineering</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-brand-500"></i> Laptop Hardware Diagnostics</li>
+                        </ul>
+                    </div>
+                    <button onclick="openQuoteModal('Desktops & Workstations')" class="w-full py-2.5 rounded-lg bg-slate-100 hover:bg-brand-50 text-slate-800 hover:text-brand-600 font-semibold text-xs transition-colors">
+                        Inquire Now
+                    </button>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200/80 card-shadow card-shadow-hover transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl accent-gradient flex items-center justify-center text-white text-xl shadow-md mb-5">
+                            <i class="fa-solid fa-print"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Printers & Automation</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            Commercial multi-function laser printers, heavy-duty copiers, toner cartridges, and drum replacements.
+                        </p>
+                        <ul class="text-xs text-slate-700 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-brand-500"></i> Laser Printer Maintenance</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-brand-500"></i> Original Toner & Cartridge Supply</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-brand-500"></i> Network Printer Configuration</li>
+                        </ul>
+                    </div>
+                    <button onclick="openQuoteModal('Printers & Copiers')" class="w-full py-2.5 rounded-lg bg-slate-100 hover:bg-brand-50 text-slate-800 hover:text-brand-600 font-semibold text-xs transition-colors">
+                        Inquire Now
+                    </button>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200/80 card-shadow card-shadow-hover transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl accent-gradient flex items-center justify-center text-white text-xl shadow-md mb-5">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">AMC & Hardware Repair</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            Annual Maintenance Contracts (AMC) for corporate IT assets. On-call emergency hardware troubleshooting.
+                        </p>
+                        <ul class="text-xs text-slate-700 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-brand-500"></i> Comprehensive & Non-Comprehensive AMC</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-brand-500"></i> Chip-Level Motherboard Repair</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-brand-500"></i> Scheduled Preventive Maintenance</li>
+                        </ul>
+                    </div>
+                    <button onclick="openQuoteModal('IT Maintenance & AMC')" class="w-full py-2.5 rounded-lg bg-slate-100 hover:bg-brand-50 text-slate-800 hover:text-brand-600 font-semibold text-xs transition-colors">
+                        Inquire Now
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Partner Brands Section -->
+    <section id="partners" class="py-16 bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-xs font-bold text-slate-400 uppercase tracking-widest mb-8">
+                Enterprise Hardware & OEM Systems Supported
+            </p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70">
+                <div class="flex items-center gap-2 text-slate-700 font-bold text-lg">
+                    <i class="fa-brands fa-ibm text-3xl text-brand-700"></i> IBM Enterprise
+                </div>
+                <div class="flex items-center gap-2 text-slate-700 font-bold text-lg">
+                    <i class="fa-solid fa-laptop-code text-2xl text-slate-800"></i> Dell Technologies
+                </div>
+                <div class="flex items-center gap-2 text-slate-700 font-bold text-lg">
+                    <i class="fa-brands fa-hp text-3xl text-sky-600"></i> HP Enterprise
+                </div>
+                <div class="flex items-center gap-2 text-slate-700 font-bold text-lg">
+                    <i class="fa-solid fa-print text-2xl text-slate-800"></i> Canon & Epson
+                </div>
+                <div class="flex items-center gap-2 text-slate-700 font-bold text-lg">
+                    <i class="fa-solid fa-network-wired text-2xl text-brand-600"></i> Cisco Systems
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <div class="inline-block px-3 py-1 rounded-md bg-brand-100 text-brand-700 text-xs font-bold uppercase tracking-wider">
+                    Contact Us
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900">
+                    Get in Touch with Microcom Systems
+                </h2>
+                <p class="text-slate-600">
+                    Visit our office in Mahalingapuram, Chennai, or submit an online query for immediate assistance.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                
+                <!-- Contact Details & Office Location Card -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 card-shadow space-y-6">
+                        <h3 class="text-xl font-bold text-navy-900 border-b border-slate-100 pb-4">
+                            Mahalingapuram Office
+                        </h3>
+
+                        <!-- Address -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-location-dot text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-navy-900">Address</h4>
+                                <p class="text-xs text-slate-600 leading-relaxed mt-1">
+                                    No. 5, Palat Sankaran Road, Mahalingapuram,<br>
+                                    Nungambakkam, Chennai, Tamil Nadu – 600034
+                                </p>
+                                <span class="inline-block mt-2 text-[11px] font-medium text-brand-700 bg-brand-50 px-2.5 py-0.5 rounded">
+                                    Landmark: Near Ayyappan Temple / Kodambakkam Flyover
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-phone text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-navy-900">Phone</h4>
+                                <p class="text-xs text-slate-600 mt-1">
+                                    <a href="tel:+914428170000" class="hover:text-brand-600 font-medium">+91 44 2817 0000</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-envelope text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-navy-900">Email</h4>
+                                <p class="text-xs text-slate-600 mt-1">
+                                    <a href="mailto:info@microcomsystems.in" class="hover:text-brand-600 font-medium">info@microcomsystems.in</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Hours -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-clock text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-navy-900">Business Hours</h4>
+                                <p class="text-xs text-slate-600 mt-1">
+                                    Monday – Saturday: 9:00 AM – 6:30 PM<br>
+                                    Sunday: Closed
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Embed Map Visual Frame -->
+                    <div class="bg-white rounded-2xl p-2 border border-slate-200 card-shadow overflow-hidden">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.5367375215265!2d80.2223!3d13.0601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266f585174e17%3A0x266ac24791e01ceb!2sMicrocom%20Systems!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                            class="w-full h-52 rounded-xl border-0" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                </div>
+
+                <!-- Interactive Contact Form -->
+                <div class="lg:col-span-7">
+                    <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 card-shadow">
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Send Us a Message</h3>
+                        <p class="text-xs text-slate-500 mb-6">Fill out the details below and our service team will contact you promptly.</p>
+
+                        <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Your Name *</label>
+                                    <input type="text" required placeholder="e.g. Rajesh Kumar" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Phone Number *</label>
+                                    <input type="tel" required placeholder="e.g. +91 98765 43210" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Email Address</label>
+                                    <input type="email" placeholder="name@company.com" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Service Required</label>
+                                    <select id="service-select" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all text-slate-700">
+                                        <option value="General Inquiry">General Inquiry</option>
+                                        <option value="Enterprise Server Procurement">Enterprise Server Procurement</option>
+                                        <option value="Desktop / Laptop AMC">Desktop / Laptop AMC</option>
+                                        <option value="Printer & Copier Repair">Printer & Copier Repair</option>
+                                        <option value="Hardware Parts Sourcing">Hardware Parts Sourcing</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Your Message / Requirements</label>
+                                <textarea rows="4" required placeholder="Please describe your hardware or maintenance requirement..." class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-3.5 rounded-xl accent-gradient text-white font-semibold text-sm shadow-md shadow-brand-500/20 hover:shadow-lg transition-all">
+                                Send Message
+                            </button>
+                        </form>
+
+                        <!-- Form Submission Notification Message Box -->
+                        <div id="form-message" class="hidden mt-4 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-medium flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-600 text-lg"></i>
+                            <div>
+                                <p class="font-bold">Thank you for contacting Microcom Systems!</p>
+                                <p class="text-[11px] text-emerald-700">We have received your request and will reach out shortly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-navy-950 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                
+                <!-- Col 1: Brand Info -->
+                <div class="space-y-4 md:col-span-1">
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-lg accent-gradient flex items-center justify-center text-white font-bold">
+                            <i class="fa-solid fa-server"></i>
+                        </div>
+                        <span class="text-lg font-bold text-white font-heading">MICROCOM SYSTEMS</span>
+                    </div>
+                    <p class="text-xs leading-relaxed text-slate-400">
+                        Enterprise server hardware, commercial printer solutions, and dedicated IT maintenance services based in Mahalingapuram, Chennai.
+                    </p>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h4 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">Quick Links</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#home" class="hover:text-brand-400 transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-brand-400 transition-colors">About Us</a></li>
+                        <li><a href="#services" class="hover:text-brand-400 transition-colors">Services & Hardware</a></li>
+                        <li><a href="#partners" class="hover:text-brand-400 transition-colors">Supported Brands</a></li>
+                        <li><a href="#contact" class="hover:text-brand-400 transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Services -->
+                <div>
+                    <h4 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">Our Solutions</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><span class="text-slate-400">IBM / HP / Dell Server Sales</span></li>
+                        <li><span class="text-slate-400">Commercial Printer Repairs</span></li>
+                        <li><span class="text-slate-400">Annual Maintenance Contracts</span></li>
+                        <li><span class="text-slate-400">Corporate Desktop Setup</span></li>
+                        <li><span class="text-slate-400">Genuine Hardware Parts</span></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Domain & Address -->
+                <div class="space-y-3 text-xs">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider">Official Domain</h4>
+                    <p class="text-brand-400 font-medium">www.microcomsystems.in</p>
+                    <p class="text-slate-400">No. 5, Palat Sankaran Road, Mahalingapuram, Nungambakkam, Chennai - 600034</p>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p>&copy; <span id="year"></span> Microcom Systems. All rights reserved.</p>
+                <p>Designed for Enterprise IT Infrastructure in Chennai</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Get a Quote Modal Backdrop -->
+    <div id="quote-modal" class="fixed inset-0 bg-navy-950/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 card-shadow relative">
+            <button onclick="closeQuoteModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 text-xl font-bold p-1">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-xl accent-gradient text-white flex items-center justify-center">
+                    <i class="fa-solid fa-file-signature text-lg"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-navy-900">Request an IT Quote</h3>
+                    <p class="text-xs text-slate-500">Microcom Systems | Fast Response</p>
+                </div>
+            </div>
+
+            <form onsubmit="handleQuoteSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Company / Individual Name *</label>
+                    <input type="text" required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Phone Number *</label>
+                    <input type="tel" required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Hardware / Solution Required</label>
+                    <input type="text" id="quote-target-service" placeholder="e.g., Server setup, bulk printers..." class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                </div>
+                <button type="submit" class="w-full py-3 rounded-xl accent-gradient text-white font-semibold text-sm shadow-md">
+                    Submit Quote Request
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Set current year dynamically in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Modal Functionality
+        const quoteModal = document.getElementById('quote-modal');
+        const targetServiceInput = document.getElementById('quote-target-service');
+
+        function openQuoteModal(serviceName = '') {
+            if (serviceName) {
+                targetServiceInput.value = serviceName;
+            } else {
+                targetServiceInput.value = '';
+            }
+            quoteModal.classList.remove('hidden');
+        }
+
+        function closeQuoteModal() {
+            quoteModal.classList.add('hidden');
+        }
+
+        // Close Modal when clicking outside box
+        quoteModal.addEventListener('click', (e) => {
+            if (e.target === quoteModal) {
+                closeQuoteModal();
+            }
+        });
+
+        // Contact Form Handling (Simulation)
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const formMessage = document.getElementById('form-message');
+            formMessage.classList.remove('hidden');
+            e.target.reset();
+            setTimeout(() => {
+                formMessage.classList.add('hidden');
+            }, 6000);
+        }
+
+        // Quote Modal Handling
+        function handleQuoteSubmit(e) {
+            e.preventDefault();
+            closeQuoteModal();
+            // Show toast message
+            const formMessage = document.getElementById('form-message');
+            formMessage.classList.remove('hidden');
+            setTimeout(() => {
+                formMessage.classList.add('hidden');
+            }, 6000);
+        }
+    </script>
+</body>
+</html>
